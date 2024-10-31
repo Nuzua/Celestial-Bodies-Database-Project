@@ -279,6 +279,7 @@ INSERT INTO public.blackhole VALUES (3, 'BH3', NULL, NULL, NULL, NULL);
 INSERT INTO public.blackhole VALUES (4, 'BH4', NULL, NULL, true, 'Galaxy2');
 INSERT INTO public.blackhole VALUES (5, 'BH5', NULL, NULL, false, NULL);
 INSERT INTO public.blackhole VALUES (6, 'BH6', NULL, NULL, true, 'Galaxy4');
+INSERT INTO public.blackhole VALUES (7, 'BH7', NULL, NULL, true, 'Galaxy6');
 
 
 --
@@ -353,7 +354,7 @@ INSERT INTO public.star VALUES (6, 'Star6', NULL, NULL, NULL, 1);
 -- Name: blackhole_blackhole_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.blackhole_blackhole_id_seq', 6, true);
+SELECT pg_catalog.setval('public.blackhole_blackhole_id_seq', 7, true);
 
 
 --
@@ -491,4 +492,3 @@ ALTER TABLE ONLY public.star
 --
 -- PostgreSQL database dump complete
 --
-

@@ -200,3 +200,16 @@ git push --help
 git pull
 git push -u origin main
 git add .
+git commit -m "Playing with my database."
+git push --set-upstream origin main
+git push
+git push --set-upstream origin
+pg_dump -cC --inserts -U freecodecamp universe > universe.sql
+git push
+git push --set-upstream origin
+git push --set-upstream origin main
+git push
+git remote -v
+git branch -M main
+git push -u origin main
+git add .
