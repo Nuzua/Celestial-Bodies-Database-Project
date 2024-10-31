@@ -51,7 +51,9 @@ CREATE TABLE public.blackhole (
     blackhole_id integer NOT NULL,
     name character varying NOT NULL,
     age_in_mil_years integer,
-    distance_from_earth numeric
+    distance_from_earth numeric,
+    center_of_galaxy boolean,
+    center_of_which_galaxy character varying
 );
 
 
@@ -271,9 +273,12 @@ ALTER TABLE ONLY public.star ALTER COLUMN star_id SET DEFAULT nextval('public.st
 -- Data for Name: blackhole; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.blackhole VALUES (1, 'BH1', NULL, NULL);
-INSERT INTO public.blackhole VALUES (2, 'BH2', NULL, NULL);
-INSERT INTO public.blackhole VALUES (3, 'BH3', NULL, NULL);
+INSERT INTO public.blackhole VALUES (1, 'BH1', NULL, NULL, NULL, NULL);
+INSERT INTO public.blackhole VALUES (2, 'BH2', NULL, NULL, NULL, NULL);
+INSERT INTO public.blackhole VALUES (3, 'BH3', NULL, NULL, NULL, NULL);
+INSERT INTO public.blackhole VALUES (4, 'BH4', NULL, NULL, true, 'Galaxy2');
+INSERT INTO public.blackhole VALUES (5, 'BH5', NULL, NULL, false, NULL);
+INSERT INTO public.blackhole VALUES (6, 'BH6', NULL, NULL, true, 'Galaxy4');
 
 
 --
@@ -348,7 +353,7 @@ INSERT INTO public.star VALUES (6, 'Star6', NULL, NULL, NULL, 1);
 -- Name: blackhole_blackhole_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.blackhole_blackhole_id_seq', 3, true);
+SELECT pg_catalog.setval('public.blackhole_blackhole_id_seq', 6, true);
 
 
 --
